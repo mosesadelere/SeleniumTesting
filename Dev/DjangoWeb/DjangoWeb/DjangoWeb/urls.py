@@ -1,3 +1,8 @@
+from django.conf.urls import include, url
+import MyApp1.views
+
+
+
 """
 DjangoWeb URL Configuration
 
@@ -23,4 +28,8 @@ Including another URLconf
 urlpatterns = [
     # Uncomment the next line to enable the admin:
     #path('admin/', admin.site.urls)
+    url(r'^$', MyApp1.views.index, name='index'),
+    url(r'^home$', MyApp1.views.index, name='home'),
+
 ]
+
